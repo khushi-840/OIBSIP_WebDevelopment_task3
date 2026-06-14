@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern, professional Temperature Converter tool supporting Celsius, Fahrenheit, and Kelvin conversions." />
+  <title>Temperature Converter | TempConvert Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background floating orbs for visual depth -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <main class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-icon">🌡️</span>
+        <span class="logo-text">TempConvert <span class="logo-accent">Pro</span></span>
+      </div>
+      <p class="tagline">Instant &amp; Accurate Temperature Conversion</p>
+    </header>
+
+    <!-- Converter Card -->
+    <section class="card" aria-label="Temperature Converter">
+
+      <!-- Card Header -->
+      <div class="card-header">
+        <h1 class="card-title">Temperature Converter</h1>
+        <p class="card-subtitle">Enter a value and select a conversion type</p>
+      </div>
+
+      <!-- Form -->
+      <div class="form-group">
+        <label for="tempInput" class="form-label">Temperature Value</label>
+        <div class="input-wrapper">
+          <span class="input-icon">°</span>
+          <input
+            type="number"
+            id="tempInput"
+            class="form-input"
+            placeholder="e.g. 100"
+            aria-label="Temperature input value"
+            autocomplete="off"
+          />
+        </div>
+        <span class="error-msg" id="errorMsg" role="alert" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="conversionType" class="form-label">Conversion Type</label>
+        <div class="select-wrapper">
+          <select id="conversionType" class="form-select" aria-label="Select conversion type">
+            <option value="c-to-f">Celsius → Fahrenheit</option>
+            <option value="f-to-c">Fahrenheit → Celsius</option>
+            <option value="c-to-k">Celsius → Kelvin</option>
+            <option value="k-to-c">Kelvin → Celsius</option>
+            <option value="f-to-k">Fahrenheit → Kelvin</option>
+            <option value="k-to-f">Kelvin → Fahrenheit</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+      </div>
+
+      <!-- Convert Button -->
+      <button id="convertBtn" class="btn-convert" aria-label="Convert temperature">
+        <span class="btn-text">Convert</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+      <!-- Result Section -->
+      <div class="result-box" id="resultBox" aria-live="polite" aria-label="Conversion result">
+        <div class="result-label">Result</div>
+        <div class="result-value" id="resultValue">—</div>
+        <div class="result-formula" id="resultFormula"></div>
+      </div>
+
+      <!-- Quick Reference -->
+      <div class="quick-ref">
+        <p class="quick-ref-title">Quick Reference</p>
+        <div class="ref-grid">
+          <div class="ref-item">
+            <span class="ref-label">Freezing Point</span>
+            <span class="ref-value">0°C / 32°F / 273.15 K</span>
+          </div>
+          <div class="ref-item">
+            <span class="ref-label">Boiling Point</span>
+            <span class="ref-value">100°C / 212°F / 373.15 K</span>
+          </div>
+          <div class="ref-item">
+            <span class="ref-label">Body Temp</span>
+            <span class="ref-value">37°C / 98.6°F / 310.15 K</span>
+          </div>
+          <div class="ref-item">
+            <span class="ref-label">Absolute Zero</span>
+            <span class="ref-value">-273.15°C / -459.67°F / 0 K</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Built with <span class="heart">♥</span> using Pure HTML, CSS &amp; JavaScript</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
